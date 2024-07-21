@@ -1,20 +1,34 @@
-/* write 	overloaded	functions	to	convert	an	int	to	a	string	and	to convert	a	float	to	a	string.*/
-#include <iostream>
-using namespace std ;
-std::string toString(int value)
-{
-return std::to_string(value);
-}
-std::string toString(float value){
-    return std::to_string(value);
-}
+/* write 	overloaded	functions	to	convert	float point  to string .*/
+ #include<iostream>
+#include <math.h>
+using namespace std;
 int main()
 {
-    int intValue = 41;
-    float floatValue = 3.14f;
-    std::string intString = toString(intValue);
-    std::string floatString = toString(floatValue);
-    std::cout<<"Integer as string  : "<<intString <<std :: endl;
-    std::cout<<"Float as string    : "<<floatString <<std :: endl;
+    string s = "125.4723";
+    double n = 0;
+    double f = 0;
+    double number;
+    int aftreDecimalDigit = 0;
+    int condition = 0;
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] == '.')
+        {
+            condition = 1;
+            continue;
+        }
+        if (condition == 0)
+        {
+            n = n * 10 + s[i] - '0';
+        }
+        if (condition == 1)
+        {
+            f = f * 10 + s[i] - '0';
+            aftreDecimalDigit++;
+        }
+        
+    }
+    number = n + f/pow(10,aftreDecimalDigit);
+    cout << number << endl;
     return 0;
 }
