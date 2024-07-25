@@ -1,7 +1,24 @@
 /* find the error*/
-class	Date { private: int	day,	month,	year;
-Date() {
-day	=	7; month	=	9; year	=	2019;
-}
+#include <iostream>
+using namespace std;
+
+class Date {
+private:
+    int day, month, year;
+
+public:
+    Date() {
+        day = 7;
+        month = 9;
+        year = 2019;
+    }
+    void print() const {
+        cout << " The date  is : " << day << "/" << month << "/" << year << endl;
+    }
 };
-int	main() { Date	today; return	0; }
+
+int main() {
+    Date today; // Now the constructor is accessible
+    today.print();
+    return 0;
+}
