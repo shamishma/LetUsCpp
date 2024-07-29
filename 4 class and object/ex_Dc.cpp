@@ -25,7 +25,7 @@ public:
                 cin >> arr[i][j];
     }
 
-    void printValue() const
+    void printValue() 
     {
         for (int i = 0; i < 3; ++i)
         {
@@ -35,7 +35,7 @@ public:
         }
     }
 
-    Matrix operator+(const Matrix &b) const
+    Matrix operator+(const Matrix &b) 
     {
         Matrix result;
         for (int i = 0; i < 3; ++i)
@@ -44,7 +44,7 @@ public:
         return result;
     }
 
-    Matrix operator*(const Matrix &b) const
+    Matrix operator*(const Matrix &b) 
     {
         Matrix result;
         for (int i = 0; i < 3; ++i)
