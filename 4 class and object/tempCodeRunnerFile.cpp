@@ -1,7 +1,10 @@
-r1.setData(); // set data in elements of the object
-    // r1.displayData();   // display the data set by setData()
-    // r1.areaPeri();      // calculate and print area and perimeter
-
-    // r2.setData();   // set data in elements of the object
-    // r2.displayData();   // display the data set by setData()
-    // r2.areaPeri();
+Time t;
+    t.inputTime();
+    cout << "--------------------------------\n";
+    cout << "Initial Time         : ";
+    t.displayTime();
+    ++t;
+    cout << "--------------------------------\n";
+    cout << "After increment 1 minute : ";
+    t.displayTime();
+    cout << "=================================\n";

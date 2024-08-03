@@ -11,8 +11,10 @@ private:
     int minutes;
 
 public:
-    Time(int h = 0, int m = 0) : hours(h), minutes(m)
+    Time()
     {
+        int h= hours;
+        int m= minutes;
     }
     void inputTime()
     {
@@ -34,12 +36,11 @@ public:
     }
     void displayTime() const
     {
-        cout << (hours < 10 ? "0" : "") << hours << ":"
+        cout << (hours < 10 ? "0"  : "") << hours << ":"
              << (minutes < 10 ? "0" : "") << minutes << endl;
     }
 
-    // Overloaded ++ operator to increment time by 1 minute
-    Time &operator++()
+    Time operator++()
     {
         ++minutes;
         if (minutes >= 60)
